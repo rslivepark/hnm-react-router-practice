@@ -14,8 +14,14 @@ const ProductAllPage = () => {
     getProducts();
   }, []);
   return (
-    <div>
-      <ProductCard></ProductCard>
+    <div className='product-list-container'>
+      {productList.map((product) => (
+        <ProductCard
+          key={product.id}
+          product={product}
+          className='product-card '
+        ></ProductCard>
+      ))}
     </div>
   );
 };
