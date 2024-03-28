@@ -1,19 +1,40 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+  font-family: 'Pretendard-Regular';
+}
+
 .login-button {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   margin-right: 20px;
+  margin-top: 50px;
 }
 
+.login-button > div {
+  margin-left: 10px;
+}
+
+.login-button:hover {
+  cursor: pointer;
+}
 .nav-section {
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-bottom: 30px;
 }
 
 .menu-area {
   display: flex;
   justify-content: center;
-  flex-grow: 1;
+  align-items: center;
 }
 
 .menu-list {
@@ -24,16 +45,31 @@
 }
 
 .menu-list li {
-  margin-top: 20px;
-  padding: 10px;
+  margin: 0 10px 20px 10px;
 }
+
+.product-img {
+  width: 200px;
+  height: auto;
+}
+
+.product-card {
+  margin-bottom: 30px;
+}
+
+.product-card:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
 
 .search-box {
   border-bottom: 1px solid black;
   position: absolute;
   right: 20px;
-  padding: 5px;
+  top: 165px
 }
+
 .search-box input {
   border: none;
   margin-left: 5px;
@@ -42,20 +78,4 @@
   outline: none;
 }
 
-.product-list-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
 
-.product-card {
-  width: 200px;
-  height: auto;
-}
-
-.card-img {
-  width: 400px;
-  height: auto;
-}

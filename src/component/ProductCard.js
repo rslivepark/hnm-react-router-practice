@@ -1,19 +1,23 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const ProductCard = () => {
+
+const ProductCard = ({ item }) => {
+	const navigate = useNavigate();
+	const showDetail = () => {
+		navigate(`/product/${item.id}`);
+		
+	}
   return (
-    <div>
-      <img
-        className='card-img'
-        src='https://noona-hnm.netlify.app/pattern-jacket.jpeg'
-        alt='상품사진'
-      ></img>
-      <div>Concioust choice</div>
-      <div>상품명</div>
-      <div>가격</div>
-      <div>신상</div>
-    </div>
-  );
+		<div className='card' onClick={showDetail}>
+      <img className='product-img'
+        src={item?.img} alt="상품사진"></img>
+			<div>{item?.choice == true ? 'Concioust choice' : ''}</div>
+			<div>{item?.title}</div>
+			<div>{item?.price}</div>
+			<div>{item?.new == true ? '신제품' : ''}</div>
+		</div>
+	);
 };
 
 export default ProductCard;
