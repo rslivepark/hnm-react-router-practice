@@ -78,4 +78,22 @@
   outline: none;
 }
 
+.product-img {
+  display: flex;
+  justify-content: flex-end;
+}
 
+/* 상품상세페이지 폰트 사이즈*/
+.product-name {
+  font-size: x-large;
+  font-weight: 800;
+}
+
+.product-price {
+  font-size: large;
+}
+
+
+.product-size, .product-name, .product-price, .product-choice, .product-btn {
+  margin-top: 20px;
+}
